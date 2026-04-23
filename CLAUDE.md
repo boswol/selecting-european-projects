@@ -8,28 +8,31 @@ Browse open funding calls (e.g., EU Horizon Europe, ERC, national grants), evalu
 
 ## Research Profile
 
-> Fill this in before using the skills below.
-
-- **Research topics:** (food safety, food, agriculture, biological control, climate)
-- **Keywords:** (AI, artificial intelligence, generative AI, LLM, Agentic AI)
-- **Institution type:** (research institute)
-- **Preferred budget range:** (€200k–€5M)
-- **Preferred consortium size:** (small 3–5, large 6+)
-- **Constraints:** (deadline no sooner than 3 months out)
+- **Research topics:** food safety, food security, agriculture, biological control, digital tool development
+- **Keywords:** AI, artificial intelligence, generative AI, LLM, Agentic AI, decision support system, advisory tool
+- **Institution type:** research institute
+- **Preferred budget range:** €200k–€5M
+- **Preferred consortium size:** small (3–5) or large (6+)
+- **Target users:** farmers, food safety inspectors, food service professionals, policy makers
+- **Delivery format:** web application, API/service
+- **Constraints:** deadline no sooner than 3 months from today
 
 ## Skills
 
 Skills are slash commands in `.claude/commands/`. Run them as `/skill-name [args]`.
 
-| Skill | Command | Description |
-|---|---|---|
-| Find calls | `/find-calls` | Web-searches for open funding calls matching the research profile |
-| Evaluate call | `/evaluate-call <url>` | Scores a single call against the profile (fit, feasibility, deadline, budget) |
-| Shortlist | `/shortlist` | Shows and updates the ranked list of calls being tracked |
-| Draft outline | `/draft-proposal-outline <call>` | Produces a structured proposal outline for a selected call |
+| Skill | Command | Description | Status |
+|---|---|---|---|
+| Find calls | `/find-calls [filter]` | Web-searches for open funding calls matching the research profile; saves results to `calls/` | Built |
+| Scan work programme | `/scan-workprogramme <filename>` | Reads a local PDF from `call_documents/` and extracts, scores, and saves all matching call topics | Built |
+| Evaluate call | `/evaluate-call <url>` | Scores a single call URL against the profile (fit, feasibility, deadline, budget) | Built |
+| Shortlist | `/shortlist` | Shows and updates the ranked list of calls being tracked | Planned |
+| Draft outline | `/draft-proposal-outline <call>` | Produces a structured proposal outline for a selected call | Planned |
 
-## Key Files
+## Key Files and Directories
 
-- `calls/` — fetched call summaries (one file per call)
-- `shortlist.md` — ranked tracking list of candidate calls
+- `calls/` — one markdown file per discovered funding call
+- `call_documents/` — downloaded work programme PDFs for local scanning with `/scan-workprogramme`
+- `shortlist.md` — ranked tracking list of candidate calls (not yet created)
 - `.claude/commands/` — skill definitions
+- `.claude/commands/find-calls/REFERENCE.md` — curated list of funding portals by country and programme; used by `/find-calls` to know where to search

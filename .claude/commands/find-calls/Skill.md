@@ -3,22 +3,10 @@ name: Find Calls
 description: Search for open research funding calls (EU Horizon Europe, ERC, national grants) matching the research profile in CLAUDE.md. Use when looking for new grant opportunities to evaluate.
 ---
 
-Search for open research funding calls that match the research profile in CLAUDE.md.
-
-The research profile is:
-- Topics: food safety, food, agriculture, biological control, climate
-- Keywords: AI, artificial intelligence, generative AI, LLM, Agentic AI
-- Institution type: research institute
-- Budget range: €200k–€5M
-- Consortium size: small (3–5) or large (6+)
-- Constraint: deadline no sooner than 3 months from today
+Search for open research funding calls that match the research profile defined in the **Research Profile** section of `CLAUDE.md`. Use all fields from that section (topics, keywords, institution type, budget range, consortium size, deadline constraint) when assessing relevance and filtering results.
 
 Steps:
-1. Use WebSearch to find currently open EU funding calls relevant to the profile. Search across these sources:
-   - EU Funding & Tenders Portal (ec.europa.eu/info/funding-tenders)
-   - Horizon Europe work programmes
-   - Any other relevant national or international research funding bodies
-   Use search queries like "open Horizon Europe call food AI 2026", "EU funding call agriculture artificial intelligence", "Horizon Europe biological control call 2026", and similar variations.
+1. Use WebSearch to find currently open EU funding calls relevant to the profile. Search across sources referenced in `REFERENCE.md`, prioritising EU-wide portals first, then national ones. Focus on calls that explicitly mention AI applications in agriculture, food safety, or related areas. 
 
 2. For each promising call found (aim for 5–10 results), collect:
    - Call title
